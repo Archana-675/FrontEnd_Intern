@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photo Editing Tool</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav id="navbar">
+    <div class="logo">Photo Editor</div>
+    <ul class="nav-links">
+      <li><a href="#crop-section">Crop</a></li>
+      <li><a href="#resize-section">Resize</a></li>
+      <li><a href="#filters-section">Filters</a></li>
+    </ul>
+  </nav>
+
+  <!-- Section 1: Crop -->
+  <section id="crop-section" class="section">
+    <h2>Crop Your Image</h2>
+    <div class="tool-container">
+      <input type="file" id="crop-input" accept="image/*">
+      <canvas id="crop-canvas"></canvas>
+      <button id="crop-button">Crop</button>
+    </div>
+  </section>
+
+  <!-- Section 2: Resize -->
+  <section id="resize-section" class="section">
+    <h2>Resize Your Image</h2>
+    <div class="tool-container">
+      <input type="file" id="resize-input" accept="image/*">
+      <canvas id="resize-canvas"></canvas>
+      <label for="width">Width:</label>
+      <input type="number" id="width" placeholder="Enter width">
+      <label for="height">Height:</label>
+      <input type="number" id="height" placeholder="Enter height">
+      <button id="resize-button">Resize</button>
+    </div>
+  </section>
+
+  <!-- Section 3: Filters -->
+  <section id="filters-section" class="section">
+    <h2>Apply Filters</h2>
+    <div class="tool-container">
+      <input type="file" id="filter-input" accept="image/*">
+      <canvas id="filter-canvas"></canvas>
+      <select id="filter-select">
+        <option value="none">None</option>
+        <option value="grayscale">Grayscale</option>
+        <option value="sepia">Sepia</option>
+        <option value="invert">Invert</option>
+      </select>
+      <button id="apply-filter-button">Apply Filter</button>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
