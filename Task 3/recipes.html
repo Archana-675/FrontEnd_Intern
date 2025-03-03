@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Collection</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>🍽️ Recipe Collection</h1>
+       
+    </header>
+
+    <section class="filter-section">
+        <input type="text" id="search" placeholder="Search recipes..." onkeyup="filterRecipes()">
+        
+        <select id="cuisine-filter" onchange="filterRecipes()">
+            <option value="all">All Cuisines</option>
+            <option value="italian">Italian</option>
+            <option value="indian">Indian</option>
+            <option value="mexican">Mexican</option>
+            <option value="chinese">Chinese</option>
+        </select>
+
+        <select id="ingredient-filter" onchange="filterRecipes()">
+            <option value="all">All Ingredients</option>
+            <option value="chicken">Chicken</option>
+            <option value="vegetarian">Vegetarian</option>
+            <option value="pasta">Pasta</option>
+            <option value="rice">Rice</option>
+        </select>
+    </section>
+
+    <section id="recipes" class="recipe-container">
+        <!-- Recipes will be dynamically added here -->
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Recipe Book | Made with ❤️</p>
+    </footer>
+
+</body>
+</html>
