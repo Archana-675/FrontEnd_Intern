@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Book</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>🍽️ My Recipe Book</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="recipes.html">Recipes</a></li>
+                <li><a href="About Us.html">About Us</a></li>
+               
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <h2>Find Your Favorite Recipe</h2>
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Search recipes..." onkeyup="filterRecipes()">
+            <div class="filter-btn" onclick="toggleFilterMenu()">🔍 Filter</div>
+            <div id="filter-menu" class="filter-menu">
+                <select id="cuisine-filter" onchange="filterRecipes()">
+                    <option value="all">All Cuisines</option>
+                    <option value="italian">Italian</option>
+                    <option value="indian">Indian</option>
+                    <option value="mexican">Mexican</option>
+                    <option value="chinese">Chinese</option>
+                </select>
+                <select id="ingredient-filter" onchange="filterRecipes()">
+                    <option value="all">All Ingredients</option>
+                    <option value="chicken">Chicken</option>
+                    <option value="vegetarian">Vegetarian</option>
+                    <option value="pasta">Pasta</option>
+                    <option value="rice">Rice</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <section id="recipes" class="recipe-list">
+        <!-- Recipes will be dynamically added here -->
+    </section>
+
+    <footer id="About Us">
+        <p>&copy; 2025 Recipe Book | Created with ❤️</p>
+    </footer>
+</body>
+</html>
